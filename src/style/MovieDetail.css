@@ -1,0 +1,23 @@
+.movie-detail {
+  padding: 2rem;
+  color: #fff;
+  max-width: 800px;
+  margin: auto;
+}
+
+.movie-detail img {
+  width: 300px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #61dafb;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
