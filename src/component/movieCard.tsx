@@ -5,7 +5,7 @@ import { useFavorites } from "../context/FavoritesContext";
 import type { Movie } from "../types/movie";
 import "../style/cards.css";
 
-export function MovieCard({ movie }: { movie: Movie }) {
+function MovieCardComponent({ movie }: { movie: Movie }) {
   const { toggleFavorite, isFavorite } = useFavorites();
   const favorite = isFavorite(movie.id);
 
@@ -30,3 +30,5 @@ export function MovieCard({ movie }: { movie: Movie }) {
     </div>
   );
 }
+
+export const MovieCard = React.memo(MovieCardComponent);
