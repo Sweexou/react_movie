@@ -1,16 +1,12 @@
-import { MovieCard } from "./movieCard";
+import "../style/cards.css";
 import type { Movie } from "../types/movie";
-import "../style/displayCards.css";
+import { MovieCard } from "./movieCard";
 
-interface DisplayCardsProps {
-  movies: Movie[];
-}
-
-export function DisplayCards({ movies }: DisplayCardsProps) {
+export function DisplayCards({ movies }: { movies: Movie[] }) {
   return (
     <div className="grid">
-      {movies.map((movie) => (
-        <MovieCard key={movie.id} movie={movie} />
+      {movies.map((m) => (
+        <MovieCard key={m.id} movie={m} />
       ))}
     </div>
   );

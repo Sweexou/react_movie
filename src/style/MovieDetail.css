@@ -1,23 +1,29 @@
 .movie-detail {
   padding: 2rem;
-  color: #fff;
   max-width: 800px;
   margin: auto;
 }
 
+/* Image */
 .movie-detail img {
   width: 300px;
   border-radius: 10px;
   margin-bottom: 1rem;
 }
 
+/* Lien retour */
 .back-link {
   display: inline-block;
   margin-bottom: 1rem;
-  color: #61dafb;
   text-decoration: none;
+  font-weight: bold;
 }
 
-.back-link:hover {
-  text-decoration: underline;
+/* Couleur automatique selon thème */
+[data-theme="light"] .movie-detail {
+  color: #111;
+}
+
+[data-theme="dark"] .movie-detail {
+  color: #f1f1f1;
 }

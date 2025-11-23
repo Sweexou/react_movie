@@ -1,0 +1,27 @@
+/* === NAVBAR === */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1.2rem 0;
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--card-border);
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* === MAIN CONTENT === */
+main {
+  max-width: 1400px;
+  margin: auto;
+  padding: 2rem 1rem;
+}

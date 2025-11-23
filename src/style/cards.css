@@ -1,0 +1,72 @@
+/* === GRID RESPONSIVE === */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+/* === CARD === */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+/* === TITLE + HEART === */
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.card-title svg {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.heart-active {
+  fill: red;
+  stroke: red;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.heart-inactive {
+  fill: transparent;
+  stroke: gray;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.heart-inactive:hover {
+  stroke: red;
+}
+
+
+/* Popularity */
+.popularity {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
