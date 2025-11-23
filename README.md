@@ -1,73 +1,67 @@
-# React + TypeScript + Vite
+# 🎬 React Movie Finder — Projet React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ce projet est une application React permettant d’afficher des films via l’API TMDB, de rechercher des films, de gérer une liste de favoris et de basculer entre un thème clair / sombre (dark mode).  
+Il s’agit du projet du module **ReactJS — Web Full Stack M1**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Fonctionnalités
 
-## React Compiler
+- Page d’accueil affichant les films populaires
+- Page de recherche avec pagination
+- Page détails d’un film
+- Système de favoris (LocalStorage + Context API)
+- Page “Mes favoris”
+- Dark mode / Light mode avec sauvegarde du choix utilisateur
+- Routing complet avec React Router
+- Composants réutilisables (Cards, Grid, Layout)
+- Optimisations React :
+  - `React.memo`
+  - `useMemo`
+  - `useCallback`
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies utilisées
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React 18+**
+- **Vite**
+- **TypeScript**
+- **React Router**
+- **Context API**
+- **lucide-react** (icônes)
+- **Fetch API**
+- **CSS responsive**
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📦 Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Cloner le dépôt :
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+> git clone <https://github.com/Sweexou/react_movie.git>
+> cd react-movie
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Installer les dépendances :
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+> npm install
+
+## 🔑 Configuration API (OBLIGATOIRE)
+
+Créer un fichier .env à la racine du projet contenant :
+
+VITE_API_KEY="validApiKey"
+
+remplacer "validApiKey" par une clé api valide pouvant etre obtenu sur le site: https://www.themoviedb.org/?language=fr
+
+## ▶️ Lancer l’application
+
+> npm run dev
+
+L’application sera accessible sur :
+
+http://localhost:5173
+
+## 📦 Build de production
+
+> npm run build
