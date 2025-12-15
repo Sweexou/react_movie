@@ -7,8 +7,9 @@ export function Home() {
   const [page, setPage] = useState(1);
   const [movies, setMovies] = useState<Movie[]>([]);
 
-  const API_KEY = import.meta.env.VITE_API_KEY;
-  const URL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=${page}`;
+  const API_URL = import.meta.env.VITE_API_BASE_URL;
+  const URL = `${API_URL}/movies?page=${page}`;
+
 
   const { data, loading, error } = UseFetch(URL);
 

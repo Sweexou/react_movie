@@ -9,9 +9,9 @@ export function Search() {
   const [searchField, setSearchField] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
 
-  const API_KEY = import.meta.env.VITE_API_KEY;
+  const API_URL = import.meta.env.VITE_API_BASE_URL;
+  const URL = `${API_URL}/movies?search=${searchTerm}&page=${page}`;
 
-  const URL = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${searchTerm}&page=${page}`;
   const { data, loading, error } = UseFetch(URL);
 
   const triggerSearch = useCallback(() => {

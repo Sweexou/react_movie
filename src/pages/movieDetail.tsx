@@ -4,11 +4,12 @@ import "../style/MovieDetail.css";
 
 export function MovieDetails() {
   const { id } = useParams();
-  const apiKey = import.meta.env.VITE_API_KEY;
+  const API_URL = import.meta.env.VITE_API_BASE_URL;
 
   const { data, loading, error } = UseFetch(
-    `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=en-US`
+    `${API_URL}/movies/${id}`
   );
+
 
   if (loading) return <p>Loading movie details...</p>;
   if (error) return <p>Error loading movie details</p>;
