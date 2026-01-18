@@ -1,0 +1,178 @@
+/* Section reviews */
+.reviews-section {
+  margin-top: 2rem;
+}
+
+.reviews-title {
+  margin: 1rem 0;
+}
+
+/* Liste */
+.review-card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.review-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.review-meta .review-user a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.review-meta .review-user a:hover {
+  text-decoration: underline;
+}
+
+.review-content {
+  margin-top: 0.75rem;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* Actions */
+.review-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.review-actions button {
+  border: none;
+  padding: 0.45rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: white;
+}
+
+.review-actions .edit {
+  background: var(--primary);
+}
+
+.review-actions .edit:hover {
+  background: var(--primary-hover);
+}
+
+.review-actions .delete {
+  background: var(--danger);
+}
+
+.review-actions .delete:hover {
+  background: var(--danger-hover);
+}
+
+.review-actions .secondary {
+  background: #6b7280;
+}
+
+.review-actions .secondary:hover {
+  background: #4b5563;
+}
+
+/* Formulaire ajout / edit */
+.review-form {
+  margin-top: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.review-form h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.review-form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 120px auto;
+  gap: 0.75rem;
+  align-items: start;
+}
+
+.review-form input,
+.review-form textarea {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  outline: none;
+  font-size: 1rem;
+}
+
+.review-form textarea {
+  min-height: 110px;
+  resize: vertical;
+  grid-column: 1 / -1; /* prend toute la largeur */
+}
+
+.review-form input::placeholder,
+.review-form textarea::placeholder {
+  color: var(--muted);
+}
+
+.review-form input:focus,
+.review-form textarea:focus {
+  border-color: var(--primary);
+}
+
+.review-form .field-title {
+  grid-column: 1 / 3; /* titre large */
+}
+
+.review-form .field-rating {
+  grid-column: 3 / 4;
+}
+
+.review-form .submit-btn {
+  grid-column: 4 / 5;
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: #16a34a;
+  color: white;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.review-form .submit-btn:hover {
+  background: #15803d;
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .review-form form {
+    grid-template-columns: 1fr;
+  }
+
+  .review-form textarea,
+  .review-form .field-title,
+  .review-form .field-rating,
+  .review-form .submit-btn {
+    grid-column: 1 / -1;
+  }
+
+  .review-form .submit-btn {
+    width: 100%;
+  }
+}

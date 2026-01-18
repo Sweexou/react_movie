@@ -1,0 +1,78 @@
+.auth-container {
+  max-width: 420px;
+  margin: 4rem auto;
+  padding: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.auth-container h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auth-container input {
+  padding: 0.65rem 0.85rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  font-size: 1rem;
+  outline: none;
+}
+
+.auth-container input::placeholder {
+  color: var(--muted);
+}
+
+.auth-container input:focus {
+  border-color: var(--primary);
+}
+
+.auth-container button {
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.auth-container button:hover {
+  background: var(--primary-hover);
+}
+
+.auth-container button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.auth-container .auth-error {
+  color: var(--danger);
+  text-align: center;
+}
+
+.auth-container .auth-link {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.auth-container .auth-link a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.auth-container .auth-link a:hover {
+  text-decoration: underline;
+}

@@ -7,7 +7,10 @@ function DisplayCardsComponent({ movies }: { movies: Movie[] }) {
   return (
     <div className="grid">
       {movies.map((m) => (
-        <MovieCard key={m.id} movie={m} />
+        <MovieCard
+          key={String(m.id)}
+          movie={m}
+        />
       ))}
     </div>
   );

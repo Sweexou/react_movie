@@ -1,27 +1,43 @@
-/* === NAVBAR === */
-nav {
+.navbar {
   display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1.2rem 0;
-  background: var(--card-bg);
-  border-bottom: 1px solid var(--card-border);
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
 }
 
-nav a {
+.navbar a {
   color: var(--text);
   text-decoration: none;
-  font-weight: 600;
-  font-size: 1.1rem;
 }
 
-nav a:hover {
-  color: var(--accent);
+.navbar a:hover {
+  text-decoration: underline;
 }
 
-/* === MAIN CONTENT === */
-main {
-  max-width: 1400px;
-  margin: auto;
-  padding: 2rem 1rem;
+.auth-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.user-label {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.auth-actions button {
+  background: var(--danger);
+  border: none;
+  color: white;
+  padding: 0.45rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.auth-actions button:hover {
+  background: var(--danger-hover);
 }

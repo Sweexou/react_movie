@@ -7,12 +7,17 @@ import "../style/cards.css";
 
 function MovieCardComponent({ movie }: { movie: Movie }) {
   const { toggleFavorite, isFavorite } = useFavorites();
-  const favorite = isFavorite(movie.id);
+
+  const movieId = String(movie.id);
+  const favorite = isFavorite(movieId);
 
   return (
     <div className="card">
-      <Link to={`/movie/${movie.id}`}>
-        <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+      <Link to={`/movie/${movieId}`}>
+        <img
+          src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+          alt={movie.title}
+        />
       </Link>
 
       <div className="card-body">
@@ -20,7 +25,11 @@ function MovieCardComponent({ movie }: { movie: Movie }) {
           <span>{movie.title}</span>
 
           <Heart
-            onClick={() => toggleFavorite(movie)}
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              toggleFavorite(movieId);
+            }}
             className={favorite ? "heart-active" : "heart-inactive"}
           />
         </div>
